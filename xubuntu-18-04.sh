@@ -47,7 +47,6 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | 
 
 # Node
 
-
 # pyenv
 curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
 # export PATH="/home/juarez/.pyenv/bin:$PATH"
@@ -59,10 +58,8 @@ curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer 
 # RVM
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 \curl -sSL https://get.rvm.io | bash -s stable
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 #export PATH="$PATH:$HOME/.rvm/bin"
-
-# NODE
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # Update & Upgrade
 sudo apt-get -y update
@@ -79,7 +76,6 @@ sudo apt-get -y install \
     curl \
     docker-ce \
     dotnet-sdk-2.1 \
-    emacs-nox \
     feh \
     git \
     google-chrome-stable \
@@ -249,10 +245,15 @@ dotnet tool install fantomas-tool -g
 # TODO
 
 # emcs
+mkdir -p ~/.bin
+mkdir -p ~/.usr
+mkdir -p ~/.local/bin
+mkdir -p ~/.local/shared
 cd ~/Downloads
 git clone https://github.com/emacs-mirror/emacs.git
 apt build-dep emacs25-lucid
 ./autogen.sh
 ./configure
+./configure --prefix=/home/juarez/.usr/emacs --bindir=/home/juarez/.bin
 make
 make install
