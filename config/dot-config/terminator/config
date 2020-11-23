@@ -1,0 +1,55 @@
+[global_config]
+[keybindings]
+  zoom_normal = None
+  cycle_next = None
+  cycle_prev = None
+  go_next = <Alt>n
+  go_prev = <Alt>p
+  go_up = <Alt>k
+  go_down = <Alt>j
+  go_left = <Alt>h
+  go_right = <Alt>l
+  toggle_scrollbar = None
+  search = None
+  close_window = None
+  resize_up = None
+  resize_down = None
+  resize_left = None
+  resize_right = None
+  move_tab_right = None
+  move_tab_left = None
+  toggle_zoom = None
+  reset = None
+  reset_clear = None
+  hide_window = None
+  group_all = None
+  ungroup_all = None
+  group_tab = None
+  ungroup_tab = None
+  new_window = None
+  new_terminator = None
+  broadcast_off = None
+  broadcast_group = None
+  broadcast_all = None
+  insert_number = None
+  insert_padded = None
+  edit_window_title = None
+  edit_tab_title = None
+  edit_terminal_title = None
+  layout_launcher = None
+  help = None
+[profiles]
+  [[default]]
+    background_color = "#fdf6e3"
+    cursor_color = "#aaaaaa"
+    foreground_color = "#657b83"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]

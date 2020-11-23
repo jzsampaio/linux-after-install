@@ -45,6 +45,8 @@ sudo apt-get -y install \
 
 chsh -s $(which zsh)
 
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 git config --global user.name "Juarez Aires Sampaio Filho"
 git config --global user.email "jz@brickabode.com"
 git config --global color.ui auto
