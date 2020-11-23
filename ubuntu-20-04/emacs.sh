@@ -7,9 +7,14 @@ pushd $tmp_dir
 
 mkdir -p ~/.local/bin
 mkdir -p ~/.local/usr
+
 cd ~/Downloads
-git clone https://github.com/emacs-mirror/emacs.git
-apt build-dep emacs25-lucid
+# if [ ! -d emacs ]
+# then
+#   git clone https://github.com/emacs-mirror/emacs.git
+# fi
+
+sudo apt build-dep emacs
 ./autogen.sh
 ./configure
 ./configure --prefix=/home/$USER/.local/usr/emacs --bindir=/home/$USER/.local/bin

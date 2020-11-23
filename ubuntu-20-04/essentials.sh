@@ -37,6 +37,15 @@ sudo apt-get -y install \
     xclip \
     xscreensaver \
     xvfb \
-    zsh
+    zsh \
+    ubuntu-restricted-extras \
+    gnome-tweaks \
+    rar unrar p7zip-full p7zip-rar \
+    openjdk-11-jdk
 
 chsh -s $(which zsh)
+
+git config --global user.name "Juarez Aires Sampaio Filho"
+git config --global user.email "jz@brickabode.com"
+git config --global color.ui auto
+git config --global merge.conflictstyle diff3
