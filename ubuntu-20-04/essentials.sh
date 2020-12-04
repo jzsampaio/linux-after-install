@@ -41,7 +41,8 @@ sudo apt-get -y install \
     ubuntu-restricted-extras \
     gnome-tweaks \
     rar unrar p7zip-full p7zip-rar \
-    openjdk-11-jdk
+    openjdk-11-jdk \
+    ffmpeg
 
 chsh -s $(which zsh)
 
