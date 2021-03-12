@@ -1,0 +1,50 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'preservim/nerdtree'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'prabirshrestha/vim-lsp'
+
+call vundle#end()
+
+filetype plugin indent on
+
+set history=500
+set undolevels=500
+set cmdheight=2
+set number
+set ruler
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+set ignorecase
+set smartcase
+set incsearch
+set showmatch
+set mat=2
+set nobackup
+set nowb
+set noswapfile
+set expandtab
+set shiftwidth=4
+set tabstop=4
+set lbr
+set textwidth=90
+set encoding=UTF-8
+
+" NERDTree configuration
+" close vim if the only window left open is a NERDTree?
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let g:NERDTreeNodeDelimiter = "\u00a0"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader = ","
+let g:mapleader = ","
+nmap <leader>w :w!<cr>
+command! ReloadVimRC :so $MYVIMRC
+nmap <leader><F2> :NERDTreeToggle<cr>
